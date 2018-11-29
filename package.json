@@ -1,7 +1,7 @@
 {
-  "name": "redux-fetch-data",
-  "version": "0.1.4",
-  "description": "Redux utility library for fetching data using promises on both server and client.",
+  "name": "react-redux-fetch-data",
+  "version": "0.2.0",
+  "description": "Redux utility library for fetching data using promises on both server and client. Forked from 'redux-fetch-data'.",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "files": [
@@ -17,13 +17,13 @@
     "lint": "eslint src test",
     "prepublish": "npm run lint && npm run compile",
     "precommit": "npm-run-all lint test",
-    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require test/index.js --recursive",
+    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register --require test/index.js --recursive",
     "test:cover": "istanbul cover _mocha -- --compilers js:babel-core/register --require test/index.js --recursive",
     "test:watch": "npm test -- --watch --reporter min"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nordsoftware/redux-fetch-data.git"
+    "url": "git+https://github.com/jbarradas/react-redux-fetch-data.git"
   },
   "keywords": [
     "redux",
@@ -33,12 +33,12 @@
     "data",
     "react-component"
   ],
-  "author": "Christoffer Niska <christofferniska@gmail.com>",
+  "author": "João Barradas <barradas7@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nordsoftware/redux-fetch-data/issues"
+    "url": "https://github.com/jbarradas/react-redux-fetch-data/issues"
   },
-  "homepage": "https://github.com/nordsoftware/redux-fetch-data#readme",
+  "homepage": "https://github.com/jbarradas/react-redux-fetch-data#readme",
   "babel": {
     "presets": [
       "stage-2",
@@ -64,6 +64,7 @@
     "chai": "^3.5.0",
     "chai-enzyme": "^0.4.2",
     "chai-jsx": "^1.0.1",
+    "cross-env": "^5.2.0",
     "codeclimate-test-reporter": "^0.3.1",
     "enzyme": "^2.3.0",
     "eslint": "^2.9.0",
@@ -72,6 +73,7 @@
     "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^9.0.0",
     "mocha": "^2.4.5",
+    "prop-types": "15.6.2",
     "react": "^15.0.2",
     "react-addons-test-utils": "^15.0.2",
     "react-dom": "^15.0.2",
